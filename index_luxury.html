@@ -25,25 +25,27 @@
       padding:0 16px;
     }
 
-    /* ------- CARD CONTENT ------- */
+    /* ---------- MAIN CONTENT ---------- */
     .wrapper{
       width:100%;max-width:430px;margin-top:40px;
       background:#1a1a1a;border-radius:20px;overflow:hidden;
       box-shadow:0 12px 40px rgba(0,0,0,.6);
     }
-    .hero{position:relative;height:460px;
+    .hero{
+      position:relative;height:460px;
       background:linear-gradient(135deg,var(--rose),var(--gold));
-      display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
-    .hero h1{font-family:'Playfair Display',serif;
-      font-size:2.5rem;color:#fff;line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.4);}
+      display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;
+    }
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:2.5rem;color:#fff;line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.4);
+    }
     .section{padding:32px 28px;}
     .section h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);margin-bottom:12px;}
     .section p{font-size:1rem;line-height:1.6;color:#d0d0d0;margin-bottom:22px;max-width:700px;}
-
     .features{list-style:none;}
     .features li{margin:14px 0;font-weight:400;position:relative;padding-left:26px;}
     .features li::before{content:'★';position:absolute;left:0;color:var(--rose);font-size:1rem;}
-
     .cta{
       display:block;width:100%;background:var(--gold);color:#111;
       text-align:center;padding:16px 0;border-radius:50px;
@@ -55,17 +57,18 @@
     footer{text-align:center;margin:40px 0 20px;font-size:.85rem;color:#777;}
     footer a{color:var(--rose);text-decoration:none;}
 
-    /* ------- FORM STYLES ------- */
+    /* ---------- FORM ---------- */
     .lux-form{max-width:700px;display:grid;gap:22px;}
     .lux-form label{font-size:1rem;font-weight:500;color:#f0f0f0;display:flex;flex-direction:column;gap:8px;}
     .lux-form input,.lux-form textarea{
       background:#1f1f1f;border:2px solid var(--rose);border-radius:10px;
-      padding:14px 18px;font-size:1rem;color:#fff;transition:border .25s ease;}
+      padding:14px 18px;font-size:1rem;color:#fff;transition:border .25s ease;
+    }
     .lux-form input:focus,.lux-form textarea:focus{border-color:var(--gold);outline:none;}
     .lux-form textarea{resize:none;}
     @media(max-width:768px){.lux-form{gap:16px;}}
 
-    /* ------- MODAL ------- */
+    /* ---------- MODAL ---------- */
     .modal-overlay{
       position:fixed;inset:0;
       background:rgba(0,0,0,.75);
@@ -74,20 +77,16 @@
       z-index:9999;
     }
     .modal-overlay.open{opacity:1;pointer-events:auto;}
-
     .modal{
-      background:#1a1a1a;
-      max-width:720px;width:90%;
+      background:#1a1a1a;max-width:720px;width:90%;
       border-radius:20px;padding:32px 28px 38px;
       transform:translateY(-30px);opacity:0;
       transition:transform .35s ease,opacity .35s ease;
       position:relative;
     }
     .modal-overlay.open .modal{transform:translateY(0);opacity:1;}
-
     .modal h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);margin-bottom:12px;text-align:center;}
     .modal p{font-size:1rem;color:#d0d0d0;margin-bottom:24px;text-align:center;}
-
     .modal .close-btn{
       position:absolute;top:14px;right:18px;
       background:none;border:none;font-size:1.6rem;color:var(--offwhite);
@@ -102,6 +101,7 @@
 </head>
 <body>
 
+  <!-- MAIN CARD -->
   <div class="wrapper">
     <div class="hero">
       <h1>LIMITLESS<br>FIT</h1>
@@ -120,19 +120,20 @@
         <li><strong>Personalized Nutrition Strategy</strong> – gourmet guides tailored to your goals</li>
         <li><strong>VIP Accountability Circle</strong> – daily check‑ins, private community & coach support</li>
       </ul>
-      <!-- Trigger -->
       <button id="openModal" class="cta">Claim Your Spot</button>
     </div>
   </div>
 
-  <!-- MODAL -->
+  <!-- MODAL FORM -->
   <div id="journeyModal" class="modal-overlay" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="close-btn" aria-label="Close modal">&times;</button>
       <h2 id="modalTitle">Reserve Your Elite Journey</h2>
       <p>Step into a program crafted for exceptional women. Tell us where you want to go, and we’ll open the door.</p>
 
-      <form action="mailto:jairadestiny@gmail.com" method="post" enctype="text/plain" class="lux-form">
+      <form action="https://formsubmit.co/jairadestiny@gmail.com" method="POST" class="lux-form">
+        <input type="hidden" name="_next" value="thank-you.html">
+        
         <label>Full Name
           <input type="text" name="name" placeholder="Jane Williams" required>
         </label>
@@ -153,11 +154,12 @@
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     © 2025 Limitless Fit • <a href="https://instagram.com/jairadestinyy" target="_blank">@jairadestinyy</a>
   </footer>
 
-  <!-- Tiny JS for modal -->
+  <!-- MODAL SCRIPT -->
   <script>
     const openBtn  = document.getElementById('openModal');
     const overlay  = document.getElementById('journeyModal');
@@ -166,10 +168,10 @@
     function openModal(){
       overlay.classList.add('open');
       overlay.setAttribute('aria-hidden','false');
-      // move focus to first input for accessibility
       overlay.querySelector('input')?.focus();
       document.body.style.overflow='hidden';
     }
+
     function closeModal(){
       overlay.classList.remove('open');
       overlay.setAttribute('aria-hidden','true');
