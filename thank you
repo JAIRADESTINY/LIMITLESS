@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You • Limitless Fit</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#d4af37;
+      --rose:#ff2e93;
+      --dark:#111;
+      --offwhite:#f6f6f6;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--dark);
+      color:var(--offwhite);
+      display:flex;flex-direction:column;align-items:center;
+      padding:0 20px;
+      min-height:100vh;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero{
+      width:100%;
+      max-width:700px;
+      margin-top:60px;
+      background:linear-gradient(135deg,var(--rose),var(--gold));
+      border-radius:24px;
+      padding:70px 26px;
+      text-align:center;
+      box-shadow:0 12px 40px rgba(0,0,0,.6);
+    }
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:2.6rem;
+      line-height:1.2;
+      color:#fff;
+      text-shadow:0 2px 10px rgba(0,0,0,.35);
+      margin-bottom:18px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      color:#fefefe;
+      line-height:1.7;
+      max-width:520px;
+      margin:0 auto 34px;
+    }
+
+    /* ---------- CTA BUTTON ---------- */
+    .cta{
+      display:inline-block;
+      background:#fff;
+      color:#111;
+      padding:14px 34px;
+      border-radius:50px;
+      font-weight:600;
+      font-size:1rem;
+      text-decoration:none;
+      transition:background .3s ease;
+    }
+    .cta:hover{background:#f1f1f1;}
+
+    /* ---------- FOOTER ---------- */
+    footer{
+      margin-top:auto;
+      padding:40px 0 20px;
+      font-size:.85rem;
+      color:#777;
+      text-align:center;
+    }
+    footer a{color:var(--rose);text-decoration:none;}
+
+    @media(max-width:480px){
+      .hero{padding:60px 20px;}
+      .hero h1{font-size:2.2rem;}
+      .hero p{font-size:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Application Received! 🎉</h1>
+    <p>Thank you for taking the first step toward an elite transformation.  
+       Our team will personally review your application and text you within 24 hours to schedule your welcome call.</p>
+
+    <!-- Optional next step -->
+    <a href="pricing-packages.html" class="cta">Preview Our Packages</a>
+  </div>
+
+  <footer>
+    © 2025 Limitless Fit • <a href="https://instagram.com/jairadestinyy" target="_blank">@jairadestinyy</a>
+  </footer>
+
+</body>
+</html>
