@@ -3,140 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Limitless Fit – Bold. Feminine. Powerful.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Limitless Fit – Luxury Transformation Program</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff8fc;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --gold:#d4af37;
+      --rose:#ff2e93;
+      --dark:#111111;
+      --offwhite:#f6f6f6;
     }
-    header {
-      background: linear-gradient(to right, #ff4da6, #ff2e93);
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3.5rem;
-      font-family: 'Dancing Script', cursive;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      font-weight: 300;
-    }
-    .btn {
-      background-color: white;
-      color: #ff2e93;
-      font-weight: bold;
-      padding: 12px 30px;
-      border: 2px solid #ff2e93;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1rem;
-      display: inline-block;
-      margin-top: 25px;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #ff2e93;
-      color: white;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    h2 {
-      color: #ff2e93;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.1rem;
-    }
-    ul li::before {
-      content: "★ ";
-      color: #ff2e93;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    footer {
-      background: #fff0f7;
-      text-align: center;
-      padding: 30px 15px;
-      font-size: 0.95rem;
-      color: #555;
-    }
-    footer a {
-      color: #ff2e93;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
 
-<header>
-  <h1>LIMITLESS FIT</h1>
-  <p>Confidence. Strength. Soft Power.</p>
-  <a href="#signup" class="btn">Join Limitless</a>
-</header>
+    *{box-sizing:border-box;margin:0;padding:0;}
 
-<section>
-  <h2>About Limitless Fit</h2>
-  <p>Limitless Fit is a bold and feminine program built for women ready to step into their power — physically and mentally. It's not just about working out. It's about transforming your mindset, building confidence, and owning every part of your lifestyle.</p>
-</section>
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--dark);
+      color:var(--offwhite);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
 
-<section>
-  <h2>What You Get</h2>
-  <ul>
-    <li>Custom weekly training programs</li>
-    <li>Confidence coaching & mindset rewiring</li>
-    <li>Wellness guides and journaling prompts</li>
-    <li>Private access to group calls & Q&A</li>
-  </ul>
-</section>
+    /* ---------- WRAPPER ---------- */
+    .wrapper{
+      width:100%;
+      max-width:1100px;
+      margin-top:40px;
+      background:#1a1a1a;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 12px 40px rgba(0,0,0,.6);
+    }
 
-<section>
-  <h2>Pricing</h2>
-  <ul>
-    <li><strong>1 Month:</strong> $49</li>
-    <li><strong>3 Months:</strong> $129</li>
-    <li><strong>1 Year:</strong> $449</li>
-  </ul>
-</section>
-
-<section id="signup">
-  <h2>Join Limitless</h2>
-  <form action="mailto:jairadestiny@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="goals" placeholder="What are your goals?" rows="4"></textarea>
-    <button type="submit" class="btn">Start My Journey</button>
-  </form>
-</section>
-
-<footer>
-  <p>📧 <a href="mailto:jairadestiny@gmail.com">jairadestiny@gmail.com</a> &nbsp; | &nbsp; Follow on <a href="https://instagram.com/jairadestinyy" target="_blank">Instagram</a></p>
-</footer>
-
-</body>
-</html>
+    /* ---------- HERO ---------- */
+    .hero{
+      height:400px;
+      background:linear-gradient(135deg,var(--rose),var(--gold));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
